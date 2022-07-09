@@ -1,0 +1,15 @@
+<%= form_with model: article do |form| %>
+  <div class="m-2">
+    <%= form.label :title %><br>
+    <%= form.text_field :title, class: 'form-control w-50' %>
+  </div>
+
+  <div class="m-2">
+    <%= form.label :body %><br>
+    <%= form.text_area :body, class: 'form-control w-50' %>
+  </div>
+
+  <div>
+    <%= form.submit class: 'btn btn-primary m-2' %>
+  </div>
+<% end %>

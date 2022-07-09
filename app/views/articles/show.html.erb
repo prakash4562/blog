@@ -1,0 +1,11 @@
+<%= link_to articles_path do %>
+  <button class="btn btn-success m-2">Back</button>
+<% end %>
+<div class="card m-4" style="width: 18rem;">
+  <div class="card-header">
+    <%= @article.title %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= @article.body %></h5>
+  </div>
+</div>

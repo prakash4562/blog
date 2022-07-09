@@ -1,0 +1,29 @@
+<h1 class="d-flex justify-content-center">All Articles</h1>
+
+<%= link_to new_article_path, class: "d-flex justify-content-end px-5" do %>
+  <button class="btn btn-primary btn-lg">New Article</button>
+<% end %>
+
+<div>
+  <% @articles.each do |article| %>
+    <div class="card m-4" style="width: 25rem;">
+      <div class="card-header">
+        <%= article.title %>
+      </div>
+      <div class="card-body d-flex">
+        <%= link_to article_path(article) do %>
+          <button class="btn btn-primary mx-2">Show</button>
+        <% end %>
+
+        <%= link_to edit_article_path(article) do %>
+          <button class="btn btn-warning mx-2">Edit</button>
+        <% end %>
+
+        <%= link_to article_path(article), data: {turbo_method: :delete} do %>
+          <button class="btn btn-danger mx-2">Delete</button>
+        <% end %>
+      </div>
+
+    </div>
+  <% end %>
+</div>
